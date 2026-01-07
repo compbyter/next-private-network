@@ -1,5 +1,5 @@
 import { client } from '@/client';
-
+export const dynamic = 'force-dynamic';
 const getData = async () => {
   const homepage = client.single('homepage');
   const defaultHomepage = await homepage.find();
