@@ -14,5 +14,9 @@ const getData = async () => {
 
 export default async function Home() {
   const data = await getData();
-  return <div>Homepage title: {data && data?.data?.homepageTitle}</div>;
+  return (
+    <div>
+      Your Homepage Title from Strapi: {data && data?.data?.homepageTitle}
+    </div>
+  );
 }
