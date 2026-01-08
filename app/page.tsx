@@ -9,5 +9,5 @@ const getData = async () => {
 
 export default async function Home() {
   const data = await getData();
-  return <div>{data?.data?.homepageTitle}</div>;
+  return <div>Homepage title: {data?.data?.homepageTitle}</div>;
 }
