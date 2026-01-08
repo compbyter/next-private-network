@@ -7,7 +7,7 @@ const getData = async () => {
     console.log('Homepage: ', defaultHomepage);
     return defaultHomepage;
   } catch (error: any) {
-    console.error('Failed fetch homepage data: ', error?.response?.message);
+    console.error('Failed fetch homepage data: ', error?.response);
     return null;
   }
 };
