@@ -1,4 +1,5 @@
 import { client } from '@/client';
+
 export const dynamic = 'force-dynamic';
 const getData = async () => {
   try {
@@ -15,8 +16,12 @@ const getData = async () => {
 export default async function Home() {
   const data = await getData();
   return (
-    <div>
-      Your Homepage Title from Strapi: {data && data?.data?.homepageTitle}
+    <div className='flex-col'>
+      <h1>Your homepage title from cms: {data && data?.data?.homepageTitle}</h1>
+      <span>
+        (Make sure your Strapi app is running and that your homepage content is
+        public)
+      </span>
     </div>
   );
 }
